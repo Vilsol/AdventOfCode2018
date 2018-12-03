@@ -37,10 +37,12 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Part 1: %d\n", twos * threes)
+	fmt.Printf("Part 1: %d\n", twos*threes)
 
-	outer: for _, line := range lines {
-		inner: for _, line2 := range lines {
+outer:
+	for _, line := range lines {
+	inner:
+		for _, line2 := range lines {
 			different := 0
 			for i := range line2 {
 				if line[i] != line2[i] {
